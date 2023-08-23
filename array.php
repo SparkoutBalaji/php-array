@@ -63,12 +63,45 @@ $employees = array
   array("HARI","K",300000)  
   );  
   
-for ($row = 0; $row < 3; $row++) {  
-  for ($col = 0; $col < 3; $col++) {  
+for ($row = 0; $row < count($employees); $row++) {  
+  for ($col = 0; $col < count($employees[$row]); $col++) {  
     echo $employees[$row][$col]."  ";  
   }  
   echo "<br/>";  
 }  
+
+echo "<br/><br/>";
+ 
+//index key multi-dimensional array
+$bio = array(
+  "BALAJI N" => array(
+    "Blood Group" => "B+ve",
+    "Units" => "5"
+  ),
+  "CHARAN KS" => array(
+    "Blood Group"=> "O+ve",
+    "Units" => "6"
+  ),
+  "SUREN" => array(
+    "Blood Group"=> "B+ve",
+    "Units" => "5"
+  ),
+  "HARI PRASANTH" => array(
+    "Blood Group"=> "A1B+ve",
+    "Units" => "5"
+  )
+  );
+
+  foreach($bio as $a => $b)
+  {
+    echo "Name : ".$a."<br/>";
+    foreach($b as $bg => $u)
+    {
+      echo $bg.$u."<br/>";
+    }
+  }
+
+
 
 
 
